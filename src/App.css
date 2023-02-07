@@ -1,0 +1,274 @@
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Mada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap');
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+/* nav & footer */
+nav {
+  display: flex;
+  justify-content: end;
+  background-image: linear-gradient(to right, rgba(58, 57, 54, 0), rgba(58, 57, 54, .8));
+  padding:10px;
+  position: absolute;
+  left: 50vh;
+  right: 0px;
+  z-index: 1;
+}
+nav img {
+  width: 150px;
+  cursor: pointer;
+}
+.logout {
+  width: 200vh;
+  background-color:#e9e2da;
+  padding: 15px;
+}
+.logout button{
+  background-color: #eb6d54;
+  font-size: 15px;
+}
+
+
+footer {
+  display: flex;
+  justify-content:left;
+  background-color: rgba(58, 57, 54, 0.904);
+  margin: 0;
+  padding-left: 40px;
+  font-size: 14px;
+  color: rgb(200, 189, 171);
+}
+footer a {
+  text-decoration: none;
+  color: rgb(200, 189, 171);
+}
+footer p {
+  justify-content: center;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 10px;
+}
+/* ---------------------------------------- */
+
+/* interFace design */
+.mainInterFace{
+  display: grid;
+  grid-template-columns: 40% 60%;
+  height: 100vh;
+  background-color:#e9e2da;
+}
+.leftInterFace {
+  display: flex;
+  justify-content:left;
+}
+.rightInterFace{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 75px;
+  font-family: 'Amiri Quran', serif;
+  color: #3b3734;
+}
+.btn{
+  display: flex;
+  gap: 10px;
+}
+button{
+  background-color: #eb6d54;
+  font-size: 20px;
+  font-family: 'Mada', sans-serif;
+  border-radius: 3%;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+}
+button:hover{
+  background-color: #d6634c;
+}
+@media (max-width: 768px) {
+  .mainInterFace{
+    display: grid;
+    grid-template-columns: auto;
+    height: 100vh;
+  }
+  .rightInterFace{
+    font-size: 60px;
+    background-color:#e9e2da;
+    height: 100vh;
+  }
+}
+/* ---------------------------------------- */
+
+/* logIn-form */
+.mainlogIn{
+  background-color:#e9e2da;
+  background-image: url('./assets/s_f4.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.logIn-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.logIn-fieldset{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 60px 120px;
+  background-color: #ffffff62;
+  border: none;
+
+  font-family: 'Mada', sans-serif;
+  font-size: 25px;
+}
+.logIn-fieldset input {
+  font-family: 'Mada', sans-serif;
+  text-align: center;
+  padding: 12px 30px;
+  border: none;
+}
+.logIn-fieldset input:focus {
+  outline: 1px dotted #d6634c;
+}
+.logIn-fieldset a {
+  font-family: 'Mada', sans-serif;
+  text-align: center;
+  font-size: 15px;
+  color: #d6634c;
+  text-decoration: none;
+}
+
+/* ---------------------------------------- */
+
+/* grid */
+
+:root {
+  --PrimaryFontFamily: "Poppins", sans-serif;
+  --BackgroundColor: #e9e2da;
+  --HoverBoxShadow: 0 4px 10px #000;
+}
+
+.homePage {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--BackgroundColor);
+  height: 150vh;
+  padding: 100px;
+  font-family: var(--PrimaryFontFamily);
+}
+
+.sub {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.grid-container {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  max-width: 1200px;
+  gap: 20px;
+  margin: 0 auto;
+  grid-template-areas:
+    "block1 block1"
+    "block2 block3"
+    "block4 block5";
+}
+
+.block {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.block:hover {
+  cursor: pointer;
+}
+
+.block .image {
+  height: 100%;
+  width: 100%;
+}
+
+.block .image img:hover {
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
+  box-shadow: var(--HoverBoxShadow);
+}
+
+.block .title {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.block .title .sub {
+  font-size: 14px;
+}
+
+.block .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  filter: brightness(50%);
+}
+
+.block-1 {
+  grid-column: block1;
+}
+
+.block-2 {
+  grid-column: block2;
+}
+
+.block-3 {
+  grid-area: block3;
+}
+
+.block-4 {
+  grid-area: block4;
+}
+
+.block-5 {
+  grid-area: block5;
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-areas:
+      "block1 block1 block2 block3"
+      "block1 block1 block4 block5";
+  }
+
+  .block-1 {
+    grid-row: 1 / span 2;
+  }
+
+  .block .title .sub {
+    font-size: 20px;
+  }
+}
