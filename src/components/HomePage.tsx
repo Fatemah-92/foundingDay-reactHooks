@@ -4,7 +4,7 @@ import LogoutButton from './LogoutButton'
 function HomePage() {
   return (
     <>
-      <LogoutButton />ض
+      <LogoutButton />
       <div className='homePage'>
         <div className="grid-container">
           <a href="#" className="block block-1">
